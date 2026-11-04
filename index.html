@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XOTOEDITZ | Video Editor &amp; Content Creator Portfolio</title>
+  
+  <!-- Favicon: Official XOTO Logo -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  
+  <!-- Gaming / Tech Typography: Orbitron & Rajdhani -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================== -->
+  <!-- FULL-VIEWPORT FIXED BACKGROUND                                 -->
+  <!-- ============================================================== -->
+  <div class="fixed-background" aria-hidden="true">
+    <!-- Subtle diagonal dark overlay to maintain crisp readability in content areas -->
+    <div class="bg-diagonal-overlay"></div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- TOP-RIGHT AVATAR SLOT (FIXED / FLOATING)                       -->
+  <!-- ============================================================== -->
+  <header class="top-nav">
+    <div class="top-nav-spacer"></div>
+    
+    <button class="avatar-slot" id="avatarBtn" aria-label="Open Creator Profile" title="Click to view creator bio">
+      <div class="avatar-glow-ring"></div>
+      <img src="assets/avatar.jpg" alt="Creator Avatar" class="avatar-img" onerror="this.style.display='none'; document.getElementById('avatarFallback').style.display='flex';">
+      <!-- Fallback placeholder icon if image is missing -->
+      <div class="avatar-fallback" id="avatarFallback">
+        <span>DEV</span>
+      </div>
+    </button>
+  </header>
+
+  <!-- ============================================================== -->
+  <!-- MAIN PAGE WRAPPER                                              -->
+  <!-- ============================================================== -->
+  <main class="page-container">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-brand">
+        <h1 class="brand-title">XOTO<span>EDITZ</span></h1>
+      </div>
+
+      <!-- 
+        SUBSCRIBER TRACKER (ROUNDED TO 1.4K / 1.5K):
+        Clean, floating slider with rocket thruster cursor and backward particle sparks.
+      -->
+      <div class="subscriber-inline-widget">
+        <div class="subscriber-inline-header">
+          <div class="subscriber-label-group">
+            <span class="inline-pulse-dot"></span>
+            <span class="subscriber-label">SUBSCRIBER TRACKER</span>
+          </div>
+          <div class="subscriber-numbers">
+            <span class="current-count" id="subscriberCounter">1.4K</span>
+            <span class="divider">/</span>
+            <span class="target-count">1.5K</span>
+            <span class="percent-badge">93%</span>
+          </div>
+        </div>
+
+        <!-- Floating Progress Slider -->
+        <div class="progress-track" role="progressbar" aria-valuenow="1400" aria-valuemin="0" aria-valuemax="1500" aria-label="Subscriber Goal">
+          <div class="progress-fill" style="width: 93.33%;">
+            <!-- Rocket thruster leading dot with backward-streaming particles -->
+            <div class="thruster-cursor">
+              <div class="thruster-core"></div>
+              <div class="particle-stream">
+                <span class="spark s1"></span>
+                <span class="spark s2"></span>
+                <span class="spark s3"></span>
+                <span class="spark s4"></span>
+                <span class="spark s5"></span>
+                <span class="spark s6"></span>
+                <span class="spark s7"></span>
+                <span class="spark s8"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="subscriber-inline-subtext">
+          <span class="subtext-highlight">1.4K / 1.5K</span>
+          <span class="subtext-status">— 100 more to 1.5K!</span>
+        </div>
+      </div>
+
+      <!-- 
+        TYPEWRITER DESCRIPTION:
+        Fills the center space smoothly. Types out once on first open (no looping).
+        Tells the user's story: editor from zero to 1.4k, sharing extensions, presets, and apps.
+      -->
+      <div class="typewriter-container">
+        <div class="typewriter-badge">
+          <span class="terminal-dot"></span>
+          <span>CREATOR LOG</span>
+        </div>
+        <p class="typewriter-content">
+          <span id="typewriterText"></span><span class="typewriter-cursor" id="typewriterCursor">|</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- SCROLL-DOWN SECTION (BELOW THE FOLD): 3 CARDS IN A ROW         -->
+    <!-- ============================================================== -->
+    <section class="drops-section" id="projects">
+      <div class="section-header">
+        <h2 class="section-title">RESOURCES &amp; <span class="text-gold">DROPS</span></h2>
+        <p class="section-caption">High-performance tools, creative packs, and upcoming releases.</p>
+      </div>
+
+      <div class="cards-grid">
+        
+        <!-- CARD 1: EXTENSIONS -->
+        <article class="resource-card">
+          <div class="card-glow-backdrop"></div>
+          <div class="card-corner corner-tl"></div>
+          <div class="card-corner corner-br"></div>
+          
+          <div class="card-header">
+            <div class="card-icon">
+              <!-- Browser / CEP extension icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <span class="card-tag">SUITE</span>
+          </div>
+
+          <h3 class="card-title">Extensions</h3>
+          <p class="card-description">
+            Workflow v2 &amp; Akusoku: Custom After Effects panels and workflow tools built for video editors.
+          </p>
+
+          <!-- EXTENSION TAB LINK -->
+          <div class="card-action">
+            <a href="extensions.html" class="action-btn">
+              <span>Go to extension tab</span>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 2: FFX -->
+        <article class="resource-card">
+          <div class="card-glow-backdrop"></div>
+          <div class="card-corner corner-tl"></div>
+          <div class="card-corner corner-br"></div>
+          
+          <div class="card-header">
+            <div class="card-icon">
+              <!-- Video / VFX preset icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+              </svg>
+            </div>
+            <span class="card-tag">POPULAR</span>
+          </div>
+
+          <h3 class="card-title">FFX</h3>
+          <p class="card-description">
+            After Effects presets, color grades, transitions, and kinetic effects packs.
+          </p>
+
+          <!-- FFX TAB LINK -->
+          <div class="card-action">
+            <a href="ffx.html" class="action-btn">
+              <span>Go to FFX tab</span>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 3: COMING SOON -->
+        <article class="resource-card card-disabled">
+          <div class="card-corner corner-tl"></div>
+          <div class="card-corner corner-br"></div>
+          
+          <div class="card-header">
+            <div class="card-icon disabled-icon">
+              <!-- Lock / Clock icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <span class="card-tag tag-muted">STANDBY</span>
+          </div>
+
+          <h3 class="card-title">Coming Soon</h3>
+          <p class="card-description">
+            More drops incoming...
+          </p>
+
+          <div class="card-action">
+            <button class="action-btn btn-disabled" disabled>
+              <span>LOCKED</span>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p>&copy; 2026 XOTOEDITZ. Built with precision and passion for video editing.</p>
+    </footer>
+
+  </main>
+
+  <!-- ============================================================== -->
+  <!-- CREATOR BIO MODAL OVERLAY                                      -->
+  <!-- ============================================================== -->
+  <div class="modal-backdrop" id="bioModal" role="dialog" aria-modal="true" aria-labelledby="modalCreatorTitle" aria-hidden="true">
+    <div class="modal-card">
+      <!-- High-tech sci-fi corner trims -->
+      <div class="modal-bracket bracket-tl"></div>
+      <div class="modal-bracket bracket-tr"></div>
+      <div class="modal-bracket bracket-bl"></div>
+      <div class="modal-bracket bracket-br"></div>
+      
+      <!-- Close Button -->
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close bio modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-body">
+        <!-- Modal Avatar Preview -->
+        <div class="modal-avatar-wrapper">
+          <img src="assets/avatar.jpg" alt="Creator Profile" class="modal-avatar-img">
+          <div class="modal-avatar-ring"></div>
+        </div>
+
+        <div class="modal-header-meta">
+          <span class="modal-kicker">CREATOR PROFILE</span>
+          <h2 id="modalCreatorTitle" class="modal-title">XOTO<span>EDITZ</span></h2>
+          <div class="modal-role-pill">Video Editor &amp; Preset Creator</div>
+        </div>
+
+        <div class="modal-bio-content">
+          <div class="bio-quote-bar"></div>
+          <p class="bio-text">
+            “I'm an editor who started my journey from zero, and now I'm at 1.4k subscribers! I'm very happy with how far we've come, so I made this site to share the custom extensions I built along with the apps and presets I use in my edits.”
+          </p>
+        </div>
+
+        <!-- Social Media Channels (Themed) -->
+        <div class="modal-social-channels">
+          <!-- YouTube Button -->
+          <a href="#" class="social-btn btn-youtube" target="_blank" rel="noopener noreferrer" title="Visit YouTube Channel">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+            <span>YOUTUBE</span>
+          </a>
+
+          <!-- Instagram Button -->
+          <a href="#" class="social-btn btn-instagram" target="_blank" rel="noopener noreferrer" title="Visit Instagram Profile">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <span>INSTAGRAM</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Behavior -->
+  <script src="script.js"></script>
+</body>
+</html>
